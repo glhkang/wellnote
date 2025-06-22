@@ -12,19 +12,25 @@ with open("gpt_system_prompt.txt", "r") as f:
 
 os.makedirs("conversations", exist_ok=True)
 
+messages = [{"role": "system", "content": system_prompt}]
+
+transcript = []
+
 
 def run_agent(user_input):
+    messages.append({"role": "user", "content": user_input})
+
     try:
         response = client.chat.completions.create(
             model="gpt-4o",
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
+            messages=messages,
             temperature=0.5
         )
 
         reply = response.choices[0].message.content
+
+        messages.append({"role": "assistant", "content": reply})
+
         return reply
 
     except Exception as e:
@@ -33,8 +39,9 @@ def run_agent(user_input):
 
 if __name__ == "__main__":
     print("Primary Care Agent (Type 'exit' to quit)\n")
-
-    transcript = []
+    opening = "Hi, can you describe the symptoms that brought you in today?"
+    print(f"Agent: {opening}")
+    transcript.append(f"Agent: {opening}")
 
     while True:
         user_input = input("You: ")
