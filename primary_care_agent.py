@@ -54,6 +54,9 @@ if __name__ == "__main__":
         transcript.append(f"You: {user_input}")
         transcript.append(f"Agent: {reply}")
 
+        if "take care" in reply.lower():
+            break
+
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     filename = f"conversations/conversation_{timestamp}.txt"
 
