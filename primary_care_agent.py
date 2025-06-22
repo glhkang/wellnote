@@ -1,6 +1,7 @@
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
+from datetime import datetime
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
@@ -8,6 +9,8 @@ client = OpenAI(api_key=api_key)
 
 with open("gpt_system_prompt.txt", "r") as f:
     system_prompt = f.read()
+
+os.makedirs("conversations", exist_ok=True)
 
 
 def run_agent(user_input):
@@ -31,6 +34,8 @@ def run_agent(user_input):
 if __name__ == "__main__":
     print("Primary Care Agent (Type 'exit' to quit)\n")
 
+    transcript = []
+
     while True:
         user_input = input("You: ")
         if user_input.lower() == "exit":
@@ -38,3 +43,14 @@ if __name__ == "__main__":
 
         reply = run_agent(user_input)
         print(f"\nAgent: {reply}\n")
+
+        transcript.append(f"You: {user_input}")
+        transcript.append(f"Agent: {reply}")
+
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    filename = f"conversations/conversation_{timestamp}.txt"
+
+    with open(filename, "w") as f:
+        f.write("\n\n".join(transcript))
+
+    print(f"\n Conversation saved to {filename}")
