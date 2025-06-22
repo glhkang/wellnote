@@ -29,10 +29,12 @@ def run_agent(user_input):
 
 
 if __name__ == "__main__":
-    print("Primary Care Agent")
+    print("Primary Care Agent (Type 'exit' to quit)")
 
 while True:
     user_input = input("You: ")
+    if user_input.lower() == "exit":
+        break
 
     reply = run_agent(user_input)
     print(f"Agent: {reply} ")
