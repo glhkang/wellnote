@@ -4,26 +4,35 @@ from dotenv import load_dotenv
 
 load_dotenv()
 api_key = os.getenv("OPENAI_API_KEY")
-
 client = OpenAI(api_key=api_key)
 
+with open("gpt_system_prompt.txt", "r") as f:
+    system_prompt = f.read()
 
-system_prompt = "You are a helpful yet friendly AI primary care agent"
-user_input = "I've been feeling tired late, what should I do?"
 
-try:
-    response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_input}
-        ],
-        temperature=0.5
-    )
+def run_agent(user_input):
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.5
+        )
 
-    reply = response.choices[0].message.content
-    print("\n AI primary care agent response: ")
-    print(reply)
+        reply = response.choices[0].message.content
+        return reply
 
-except Exception as e:
-    print(f"Error communicating with OpenAI API: {e}")
+    except Exception as e:
+        print(f"Error communicating with OpenAI API: {e}")
+
+
+if __name__ == "__main__":
+    print("Primary Care Agent")
+
+while True:
+    user_input = input("You: ")
+
+    reply = run_agent(user_input)
+    print(f"Agent: {reply} ")
