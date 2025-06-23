@@ -15,8 +15,8 @@ This project simulates a primary care consultation using a GPT-4o-powered agent.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/primary-care-agent.git
-cd primary-care-agent
+git clone https://github.com/glhkang/wellnote
+cd wellnote
 ```
 
 ### 2. Install dependencies
