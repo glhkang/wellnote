@@ -13,4 +13,4 @@ I propose adding confidence scoring so the system can recognize uncertainty and 
 
 ## What Surprised Me
 
-I was surprised by how much nuance could be coded into a single prompt. The model reliably followed empathy and safety rules with no special infrastructure. It also surprised me that GPT does not store memory between turns unless manually managed, which made me think more carefully about safe design in longer-term patient use.
+I was surprised by how much nuance could be coded into a single prompt but also how easily things could go wrong without precise ordering and phrasing. I had to design the prompt like a program, structuring every behavior and constraint clearly, or the model would skip steps or break flow. It was impressive to see how reliably GPT followed empathy and safety rules without any additional infrastructure. I was also surprised to learn that GPT does not store memory between turns unless explicitly managed, which made me think more carefully about safe design in longer-term patient use.
