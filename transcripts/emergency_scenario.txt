@@ -1,0 +1,19 @@
+Agent: Hi, can you describe the symptoms that brought you in today?
+
+You: I'm feeling tightness in my chest
+
+Agent: I understand. When did this first start, and has it been getting better, worse, or staying the same?
+
+You: It started about an hour ago and it's getting worse
+
+Agent: It’s completely understandable that you’re concerned about this. What concerns you most about this?
+
+You: Is it a heart attack?
+
+Agent: It’s completely understandable that you’re concerned about a heart attack. Based on what you told me, the tightness in your chest that is worsening could be serious. Here's what I recommend: Please seek emergency medical attention immediately to ensure your safety. 
+
+This is beyond what I can safely assess remotely. I can provide guidance, but I cannot replace an in-person examination. Are there any other symptoms you'd like to talk about today?
+
+You: That is all, thanks. I will seek emergency care immediately
+
+Agent: Thanks for sharing this with me today. Take care.
