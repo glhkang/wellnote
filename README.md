@@ -58,4 +58,3 @@ The agent will greet you and begin asking about your symptoms. Type `exit` to en
 
 -   Python 3.10+
 -   GPT-4o via OpenAI API
--   `openai`, `python-dotenv`
