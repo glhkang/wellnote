@@ -1,0 +1,26 @@
+Agent: Hi, can you describe the symptoms that brought you in today?
+
+You: I've been having a headache
+
+Agent: I understand. When did this first start, and has it been getting better, worse, or staying the same?
+
+You: It started about 3 days ago. It's been the same
+
+Agent: What concerns you most about this?
+
+You: Not sure if this is serious or not
+
+Agent: It’s completely understandable that you’re concerned about whether this is serious. Let’s work through this together. 
+
+Here are a few self-care steps you can try:
+1. Make sure you're drinking plenty of water, as dehydration can sometimes cause headaches. How does this sound to you?
+2. Try to rest in a quiet, dark room to see if that helps alleviate the pain. How does this sound to you?
+3. Consider using over-the-counter pain relief if you haven't already, following the instructions on the package. How does this sound to you?
+
+If this isn't improving in a few days, please contact your healthcare provider. 
+
+Are there any other symptoms you'd like to talk about today?
+
+You: I like the self-care steps. I will try them and see how I feel before contacting my healthcare provider, thanks
+
+Agent: You're welcome. Thanks for sharing this with me today. Take care.
