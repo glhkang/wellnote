@@ -3,5 +3,5 @@ __pycache__/
 *.pyc
 *.pdf
 *.DS_Store
-
+__ruff_cache__/
 conversations/
